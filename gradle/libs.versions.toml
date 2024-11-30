@@ -1,0 +1,28 @@
+[versions]
+guava = "33.3.1-jre"
+lombok = "1.18.36"
+commons-lang = "3.17.0"
+junit-jupiter = "5.11.3"
+junit-platform-launcher = "1.11.3"
+assertj-core = "3.26.3"
+jmh-plugin = "0.7.2"
+jmh = "1.37"
+
+[libraries]
+guava = { module = "com.google.guava:guava", version.ref = "guava" }
+lombok = { module = "org.projectlombok:lombok", version.ref = "lombok" }
+commons-lang = { module = "org.apache.commons:commons-lang3", version.ref = "commons-lang" }
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit-jupiter" }
+junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher", version.ref = "junit-platform-launcher" }
+assertj = { module = "org.assertj:assertj-core", version.ref = "assertj-core" }
+jmh-core = { module = "org.openjdk.jmh:jmh-core", version.ref = "jmh" }
+jmh-bytecode = { module = "org.openjdk.jmh:jmh-generator-bytecode", version.ref = "jmh" }
+jmh-annprocess = { module = "org.openjdk.jmh:jmh-generator-annprocess", version.ref = "jmh" }
+
+[bundles]
+utils = ["guava", "lombok", "commons-lang"]
+testing = ["junit-jupiter", "assertj"]
+jmh = ["jmh-core", "jmh-bytecode"]
+
+[plugins]
+jmh = { id = "me.champeau.jmh", version.ref = "jmh-plugin" }
