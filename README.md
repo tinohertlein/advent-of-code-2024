@@ -1,4 +1,4 @@
-# 🎄🎄🎄Advent of code 2024 - Java 🎄🎄🎄
+# 🎄🎄🎄Advent of Code 2024 - Java 🎄🎄🎄
 
 ![](https://github.com/tinohertlein/advent-of-code-2024/actions/workflows/tests.yml/badge.svg)
 ![](https://img.shields.io/badge/days%20completed-4-red)
