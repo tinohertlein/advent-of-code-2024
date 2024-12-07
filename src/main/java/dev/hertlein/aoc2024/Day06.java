@@ -21,7 +21,7 @@ public class Day06 implements Day {
     public long part2(List<String> inputLines) {
         Lab initialLab = new Lab(inputLines);
 
-        return initialLab.patrolPath().stream()
+        return initialLab.patrolPath().stream().parallel()
                 .map(initialLab::newLabWithObstructionAt)
                 .filter(lab -> lab.patrolPath().isStuck())
                 .count();
