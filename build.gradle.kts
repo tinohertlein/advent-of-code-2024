@@ -11,6 +11,7 @@ import kotlin.io.path.writeText
 
 plugins {
     java
+    jacoco
     alias(libs.plugins.jmh)
 }
 
@@ -60,6 +61,15 @@ tasks.jmh {
 tasks.test {
     jvmArgs(enablePreview)
     useJUnitPlatform()
+    finalizedBy(tasks.jacocoTestReport)
+}
+
+tasks.jacocoTestReport {
+    reports {
+        csv.required = false
+        xml.required = true
+        html.required = true
+    }
 }
 
 val year = 2024
