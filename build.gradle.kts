@@ -62,6 +62,7 @@ tasks.test {
     jvmArgs(enablePreview)
     useJUnitPlatform()
     finalizedBy(tasks.jacocoTestReport)
+    maxParallelForks = Runtime.getRuntime().availableProcessors()
 }
 
 tasks.jacocoTestReport {
