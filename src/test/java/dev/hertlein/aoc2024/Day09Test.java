@@ -46,7 +46,7 @@ public class Day09Test {
                     assertThat(disk.toString()).isEqualTo("00...111...2...333.44.5555.6666.777.888899");
                 }
 
-                @Test
+                @ChallengeTest
                 void shouldCreateDiskFromChallengeInput() {
                     var disk = Disk.of(readChallengeInputFor(day).getFirst());
 
