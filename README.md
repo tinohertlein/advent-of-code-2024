@@ -3,8 +3,8 @@
 ![](https://github.com/tinohertlein/advent-of-code-2024/actions/workflows/tests.yml/badge.svg)
 ![Maintainability](https://api.codeclimate.com/v1/badges/e8f5294ee66ff9e7efa5/maintainability)
 ![Test Coverage](https://api.codeclimate.com/v1/badges/e8f5294ee66ff9e7efa5/test_coverage)
-![](https://img.shields.io/badge/days%20completed-10-red)
-![](https://img.shields.io/badge/stars%20⭐-20-blue)
+![](https://img.shields.io/badge/days%20completed-11-red)
+![](https://img.shields.io/badge/stars%20⭐-22-blue)
 
 Welcome to the Advent of Code[^aoc] Java project created by [tinohertlein](https://github.com/tinohertlein).
 
