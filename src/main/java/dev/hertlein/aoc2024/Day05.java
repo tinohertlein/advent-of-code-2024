@@ -13,15 +13,15 @@ import static java.util.Map.entry;
 import static java.util.function.Predicate.not;
 import static java.util.stream.Gatherers.windowSliding;
 
-public class Day05 implements Day {
+public class Day05 implements Day<Void> {
 
     @Override
-    public long part1(List<String> inputLines) {
+    public Long part1(List<String> inputLines, Void v) {
         return new PrintQueue(inputLines).sumOfMiddlePageNumbersOfInitiallyOrderedUpdates();
     }
 
     @Override
-    public long part2(List<String> inputLines) {
+    public Long part2(List<String> inputLines, Void v) {
         return new PrintQueue(inputLines).sumOfMiddlePageNumbersOfFixedMisorderedUpdates();
     }
 

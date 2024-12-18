@@ -4,10 +4,10 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class Day08 implements Day {
+public class Day08 implements Day<Void> {
 
     @Override
-    public long part1(List<String> inputLines) {
+    public Long part1(List<String> inputLines, Void v) {
         var map = AntennaMap.of(inputLines);
 
         return map.findAntinodes(map::findSimple)
@@ -16,7 +16,7 @@ public class Day08 implements Day {
     }
 
     @Override
-    public long part2(List<String> inputLines) {
+    public Long part2(List<String> inputLines, Void v) {
         var map = AntennaMap.of(inputLines);
 
         return map.findAntinodes(map::findResonantHarmonic)

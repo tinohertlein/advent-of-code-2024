@@ -6,15 +6,15 @@ import java.util.Set;
 
 import static dev.hertlein.aoc2024.Day07.Operator.*;
 
-public class Day07 implements Day {
+public class Day07 implements Day<Void> {
 
     @Override
-    public long part1(List<String> inputLines) {
+    public Long part1(List<String> inputLines, Void v) {
         return Equations.of(inputLines).calibrationResultWith(Set.of(ADD, MULTIPLY));
     }
 
     @Override
-    public long part2(List<String> inputLines) {
+    public Long part2(List<String> inputLines, Void v) {
         return Equations.of(inputLines).calibrationResultWith(Set.of(ADD, MULTIPLY, CONCAT));
     }
 

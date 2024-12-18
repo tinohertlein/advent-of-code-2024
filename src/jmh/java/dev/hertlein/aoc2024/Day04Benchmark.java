@@ -7,6 +7,8 @@ import org.openjdk.jmh.infra.Blackhole;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import static dev.hertlein.aoc2024.Day.EMPTY;
+
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 @State(Scope.Benchmark)
@@ -26,11 +28,11 @@ public class Day04Benchmark {
 
     @Benchmark
     public void part1(Blackhole bh) {
-        bh.consume(day.part1(challengeInput));
+        bh.consume(day.part1(challengeInput, EMPTY));
     }
 
     @Benchmark
     public void part2(Blackhole bh) {
-        bh.consume(day.part2(challengeInput));
+        bh.consume(day.part2(challengeInput, EMPTY));
     }
 }

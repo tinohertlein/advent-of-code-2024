@@ -8,15 +8,15 @@ import java.util.function.Function;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
-public class Day01 implements Day {
+public class Day01 implements Day<Void> {
 
     @Override
-    public long part1(List<String> inputLines) {
+    public Long part1(List<String> inputLines, Void v) {
         return LocationLists.of(inputLines).totalDistance();
     }
 
     @Override
-    public long part2(List<String> inputLines) {
+    public Long part2(List<String> inputLines, Void v) {
         return LocationLists.of(inputLines).similarityScore();
     }
 

@@ -8,6 +8,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
+import static dev.hertlein.aoc2024.Day.EMPTY;
 import static dev.hertlein.aoc2024.Day05.PrintQueue;
 import static dev.hertlein.aoc2024.lib.InputReader.readChallengeInputFor;
 import static dev.hertlein.aoc2024.lib.InputReader.readSampleInputFor;
@@ -78,12 +79,12 @@ public class Day05Test {
 
         @Test
         void sampleShouldBeSolved() {
-            assertThat(day.part1(readSampleInputFor(day))).isEqualTo(143L);
+            assertThat(day.part1(readSampleInputFor(day), EMPTY)).isEqualTo(143L);
         }
 
         @ChallengeTest
         void challengeShouldBeSolved() {
-            assertThat(day.part1(readChallengeInputFor(day))).isEqualTo(5_064L);
+            assertThat(day.part1(readChallengeInputFor(day), EMPTY)).isEqualTo(5_064L);
         }
     }
 
@@ -92,12 +93,12 @@ public class Day05Test {
 
         @Test
         void sampleShouldBeSolved() {
-            assertThat(day.part2(readSampleInputFor(day))).isEqualTo(123L);
+            assertThat(day.part2(readSampleInputFor(day), EMPTY)).isEqualTo(123L);
         }
 
         @ChallengeTest
         void challengeShouldBeSolved() {
-            assertThat(day.part2(readChallengeInputFor(day))).isEqualTo(5_152L);
+            assertThat(day.part2(readChallengeInputFor(day), EMPTY)).isEqualTo(5_152L);
         }
     }
 }

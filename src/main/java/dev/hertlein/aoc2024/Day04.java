@@ -8,15 +8,15 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-public class Day04 implements Day {
+public class Day04 implements Day<Void> {
 
     @Override
-    public long part1(List<String> inputLines) {
+    public Long part1(List<String> inputLines, Void v) {
         return XMAS.of(inputLines).countWords();
     }
 
     @Override
-    public long part2(List<String> inputLines) {
+    public Long part2(List<String> inputLines, Void v) {
         return CrossedMAS.of(inputLines).countWords();
     }
 

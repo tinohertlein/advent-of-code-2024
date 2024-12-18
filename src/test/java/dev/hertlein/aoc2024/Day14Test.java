@@ -21,6 +21,9 @@ import static org.assertj.core.api.SoftAssertions.assertSoftly;
 @DisplayName("Day14")
 public class Day14Test {
 
+    private final static AreaSize ADDITIONAL_INPUT_SAMPLE = new AreaSize(11, 7);
+    final static AreaSize ADDITIONAL_INPUT_CHALLENGE = new AreaSize(101, 103);
+
     private final Day14 day = new Day14();
 
     @Nested
@@ -106,12 +109,12 @@ public class Day14Test {
 
         @Test
         void sampleShouldBeSolved() {
-            assertThat(day.safetyFactor(new AreaSize(11, 7), readSampleInputFor(day))).isEqualTo(12L);
+            assertThat(day.part1(readSampleInputFor(day), ADDITIONAL_INPUT_SAMPLE)).isEqualTo(12L);
         }
 
         @ChallengeTest
         void challengeShouldBeSolved() {
-            assertThat(day.part1(readChallengeInputFor(day))).isEqualTo(219_150_360L);
+            assertThat(day.part1(readChallengeInputFor(day), ADDITIONAL_INPUT_CHALLENGE)).isEqualTo(219_150_360L);
         }
     }
 
@@ -121,12 +124,12 @@ public class Day14Test {
         @Test
         @Disabled("No sample for part 2 provided")
         void sampleShouldBeSolved() {
-            assertThat(day.part2(readSampleInputFor(day))).isEqualTo(0L);
+            assertThat(day.part2(readSampleInputFor(day), ADDITIONAL_INPUT_SAMPLE)).isEqualTo(0L);
         }
 
         @ChallengeTest
         void challengeShouldBeSolved() {
-            assertThat(day.part2(readChallengeInputFor(day))).isEqualTo(8_053L);
+            assertThat(day.part2(readChallengeInputFor(day), ADDITIONAL_INPUT_CHALLENGE)).isEqualTo(8_053L);
         }
     }
 }

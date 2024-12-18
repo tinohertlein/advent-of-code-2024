@@ -11,15 +11,15 @@ import org.apache.commons.lang3.tuple.Pair;
 import java.util.Arrays;
 import java.util.List;
 
-public class Day11 implements Day {
+public class Day11 implements Day<Void> {
 
     @Override
-    public long part1(List<String> inputLines) {
+    public Long part1(List<String> inputLines, Void v) {
         return Stones.of(inputLines).countStonesAfterBlinks(25);
     }
 
     @Override
-    public long part2(List<String> inputLines) {
+    public Long part2(List<String> inputLines, Void v) {
         return Stones.of(inputLines).countStonesAfterBlinks(75);
     }
 

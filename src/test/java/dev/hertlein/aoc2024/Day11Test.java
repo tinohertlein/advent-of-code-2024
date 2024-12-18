@@ -10,6 +10,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 import java.util.List;
 
+import static dev.hertlein.aoc2024.Day.EMPTY;
 import static dev.hertlein.aoc2024.lib.InputReader.readChallengeInputFor;
 import static dev.hertlein.aoc2024.lib.InputReader.readSampleInputFor;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -51,12 +52,12 @@ public class Day11Test {
 
         @Test
         void sampleShouldBeSolved() {
-            assertThat(day.part1(readSampleInputFor(day))).isEqualTo(55_312L);
+            assertThat(day.part1(readSampleInputFor(day), EMPTY)).isEqualTo(55_312L);
         }
 
         @ChallengeTest
         void challengeShouldBeSolved() {
-            assertThat(day.part1(readChallengeInputFor(day))).isEqualTo(231_278L);
+            assertThat(day.part1(readChallengeInputFor(day), EMPTY)).isEqualTo(231_278L);
         }
     }
 
@@ -65,12 +66,12 @@ public class Day11Test {
 
         @Test
         void sampleShouldBeSolved() {
-            assertThat(day.part2(readSampleInputFor(day))).isEqualTo(65_601_038_650_482L);
+            assertThat(day.part2(readSampleInputFor(day), EMPTY)).isEqualTo(65_601_038_650_482L);
         }
 
         @ChallengeTest
         void challengeShouldBeSolved() {
-            assertThat(day.part2(readChallengeInputFor(day))).isEqualTo(274_229_228_071_551L);
+            assertThat(day.part2(readChallengeInputFor(day), EMPTY)).isEqualTo(274_229_228_071_551L);
         }
     }
 }

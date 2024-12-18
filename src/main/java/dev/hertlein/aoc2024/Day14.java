@@ -9,26 +9,30 @@ import java.util.function.Predicate;
 import java.util.regex.Pattern;
 import java.util.stream.Stream;
 
+import static dev.hertlein.aoc2024.Day14.AreaSize;
 import static java.util.function.Predicate.not;
 import static java.util.stream.Collectors.toMap;
 import static java.util.stream.Collectors.toSet;
 
-public class Day14 implements Day {
+public class Day14 implements Day<AreaSize> {
+
+    public record AreaSize(int x, int y) {
+    }
 
     // trial & error: "most of the robots should arrange themselves into a picture of a Christmas tree"
     private final static int THRESHOLD_FOR_CONNECTED_ROBOTS_FORMING_CHRISTMAS_TREE = 200;
 
     @Override
-    public long part1(List<String> inputLines) {
-        return safetyFactor(new AreaSize(101, 103), inputLines);
+    public Long part1(List<String> inputLines, AreaSize areaSize) {
+        return safetyFactor(areaSize, inputLines);
     }
 
     @Override
-    public long part2(List<String> inputLines) {
-        return new Robots(inputLines).findChristmasTree(new AreaSize(101, 103));
+    public Long part2(List<String> inputLines, AreaSize areaSize) {
+        return new Robots(inputLines).findChristmasTree(areaSize);
     }
 
-    long safetyFactor(AreaSize areaSize, List<String> inputLines) {
+    private long safetyFactor(AreaSize areaSize, List<String> inputLines) {
         var robots = new Robots(inputLines);
         robots.navigate(areaSize, 100);
         return robots
@@ -236,8 +240,5 @@ public class Day14 implements Day {
                 throw new IllegalArgumentException("No velocity found in '%s'".formatted(input));
             }
         }
-    }
-
-    record AreaSize(int x, int y) {
     }
 }

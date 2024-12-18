@@ -10,15 +10,15 @@ import java.util.stream.Gatherers;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-public class Day02 implements Day {
+public class Day02 implements Day<Void> {
 
     @Override
-    public long part1(List<String> inputLines) {
+    public Long part1(List<String> inputLines, Void v) {
         return Reports.of(inputLines).countSafeReportsStrictly();
     }
 
     @Override
-    public long part2(List<String> inputLines) {
+    public Long part2(List<String> inputLines, Void v) {
         return Reports.of(inputLines).countSafeReportsDampened();
     }
 

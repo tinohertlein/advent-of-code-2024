@@ -7,15 +7,15 @@ import java.util.stream.Collectors;
 
 import static java.util.function.Predicate.not;
 
-public class Day12 implements Day {
+public class Day12 implements Day<Void> {
 
     @Override
-    public long part1(List<String> inputLines) {
+    public Long part1(List<String> inputLines, Void v) {
         return new Garden(inputLines).fenceCost();
     }
 
     @Override
-    public long part2(List<String> inputLines) {
+    public Long part2(List<String> inputLines, Void v) {
         return new Garden(inputLines).fenceCostWithBulkDiscount();
     }
 

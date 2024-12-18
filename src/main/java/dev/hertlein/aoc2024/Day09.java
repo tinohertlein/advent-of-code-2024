@@ -13,17 +13,17 @@ import static dev.hertlein.aoc2024.Day09.BlockType.DATA;
 import static dev.hertlein.aoc2024.Day09.BlockType.FREE;
 import static java.util.stream.Collectors.*;
 
-public class Day09 implements Day {
+public class Day09 implements Day<Void> {
 
     @Override
-    public long part1(List<String> inputLines) {
+    public Long part1(List<String> inputLines, Void v) {
         return Disk.of(inputLines.getFirst())
                 .compactByMovingDataBlocks()
                 .checkSum();
     }
 
     @Override
-    public long part2(List<String> inputLines) {
+    public Long part2(List<String> inputLines, Void v) {
         return Disk.of(inputLines.getFirst())
                 .compactByMovingFiles()
                 .checkSum();

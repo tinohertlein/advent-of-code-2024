@@ -10,15 +10,15 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class Day10 implements Day {
+public class Day10 implements Day<Void> {
 
     @Override
-    public long part1(List<String> inputLines) {
+    public Long part1(List<String> inputLines, Void v) {
         return new TopologyMap(inputLines).sumOfTrailheadsScores();
     }
 
     @Override
-    public long part2(List<String> inputLines) {
+    public Long part2(List<String> inputLines, Void v) {
         return new TopologyMap(inputLines).sumOfTrailheadsRatings();
     }
 

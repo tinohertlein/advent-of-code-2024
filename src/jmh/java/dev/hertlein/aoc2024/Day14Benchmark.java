@@ -26,11 +26,11 @@ public class Day14Benchmark {
 
     @Benchmark
     public void part1(Blackhole bh) {
-        bh.consume(day.part1(challengeInput));
+        bh.consume(day.part1(challengeInput, Day14Test.ADDITIONAL_INPUT_CHALLENGE));
     }
 
     @Benchmark
     public void part2(Blackhole bh) {
-        bh.consume(day.part2(challengeInput));
+        bh.consume(day.part2(challengeInput, Day14Test.ADDITIONAL_INPUT_CHALLENGE));
     }
 }

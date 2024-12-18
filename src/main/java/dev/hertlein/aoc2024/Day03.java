@@ -8,10 +8,10 @@ import java.util.regex.Pattern;
 
 import static dev.hertlein.aoc2024.Day03.Accumulator.NOT_NEEDED;
 
-public class Day03 implements Day {
+public class Day03 implements Day<Void> {
 
     @Override
-    public long part1(List<String> inputLines) {
+    public Long part1(List<String> inputLines, Void v) {
         var joinedLines = Joiner.on("").join(inputLines);
         Pattern regex = Pattern.compile("mul\\((\\d+),(\\d+)\\)");
 
@@ -19,12 +19,12 @@ public class Day03 implements Day {
                 .matcher(joinedLines)
                 .results()
                 .map(Multiplication::of)
-                .mapToInt(Multiplication::product)
+                .mapToLong(Multiplication::product)
                 .sum();
     }
 
     @Override
-    public long part2(List<String> inputLines) {
+    public Long part2(List<String> inputLines, Void v) {
         var joinedLines = Joiner.on("").join(inputLines);
         Pattern regex = Pattern.compile("do\\(\\)|don't\\(\\)|mul\\((\\d+),(\\d+)\\)");
 

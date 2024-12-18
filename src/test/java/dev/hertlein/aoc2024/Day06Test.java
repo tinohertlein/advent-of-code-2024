@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
+import static dev.hertlein.aoc2024.Day.EMPTY;
 import static dev.hertlein.aoc2024.Day06.Coordinate;
 import static dev.hertlein.aoc2024.Day06.Lab;
 import static dev.hertlein.aoc2024.Day06.PatrolPath.STUCK;
@@ -73,12 +74,12 @@ public class Day06Test {
 
         @Test
         void sampleShouldBeSolved() {
-            assertThat(day.part1(readSampleInputFor(day))).isEqualTo(41L);
+            assertThat(day.part1(readSampleInputFor(day), EMPTY)).isEqualTo(41L);
         }
 
         @ChallengeTest
         void challengeShouldBeSolved() {
-            assertThat(day.part1(readChallengeInputFor(day))).isEqualTo(4_696L);
+            assertThat(day.part1(readChallengeInputFor(day), EMPTY)).isEqualTo(4_696L);
         }
     }
 
@@ -87,12 +88,12 @@ public class Day06Test {
 
         @Test
         void sampleShouldBeSolved() {
-            assertThat(day.part2(readSampleInputFor(day))).isEqualTo(6L);
+            assertThat(day.part2(readSampleInputFor(day), EMPTY)).isEqualTo(6L);
         }
 
         @ChallengeTest
         void challengeShouldBeSolved() {
-            assertThat(day.part2(readChallengeInputFor(day))).isEqualTo(1_443L);
+            assertThat(day.part2(readChallengeInputFor(day), EMPTY)).isEqualTo(1_443L);
         }
     }
 }

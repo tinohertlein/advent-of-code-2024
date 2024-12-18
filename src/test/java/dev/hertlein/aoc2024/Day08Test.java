@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
+import static dev.hertlein.aoc2024.Day.EMPTY;
 import static dev.hertlein.aoc2024.Day08.AntennaMap;
 import static dev.hertlein.aoc2024.lib.InputReader.readChallengeInputFor;
 import static dev.hertlein.aoc2024.lib.InputReader.readSampleInputFor;
@@ -146,12 +147,12 @@ public class Day08Test {
 
         @Test
         void sampleShouldBeSolved() {
-            assertThat(day.part1(readSampleInputFor(day))).isEqualTo(14L);
+            assertThat(day.part1(readSampleInputFor(day), EMPTY)).isEqualTo(14L);
         }
 
         @ChallengeTest
         void challengeShouldBeSolved() {
-            assertThat(day.part1(readChallengeInputFor(day))).isEqualTo(244L);
+            assertThat(day.part1(readChallengeInputFor(day), EMPTY)).isEqualTo(244L);
         }
     }
 
@@ -160,12 +161,12 @@ public class Day08Test {
 
         @Test
         void sampleShouldBeSolved() {
-            assertThat(day.part2(readSampleInputFor(day))).isEqualTo(34L);
+            assertThat(day.part2(readSampleInputFor(day), EMPTY)).isEqualTo(34L);
         }
 
         @ChallengeTest
         void challengeShouldBeSolved() {
-            assertThat(day.part2(readChallengeInputFor(day))).isEqualTo(912L);
+            assertThat(day.part2(readChallengeInputFor(day), EMPTY)).isEqualTo(912L);
         }
     }
 }

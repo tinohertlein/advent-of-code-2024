@@ -10,15 +10,15 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class Day06 implements Day {
+public class Day06 implements Day<Void> {
 
     @Override
-    public long part1(List<String> inputLines) {
+    public Long part1(List<String> inputLines, Void v) {
         return new Lab(inputLines).patrolPath().length();
     }
 
     @Override
-    public long part2(List<String> inputLines) {
+    public Long part2(List<String> inputLines, Void v) {
         Lab initialLab = new Lab(inputLines);
 
         return initialLab.patrolPath().stream().parallel()

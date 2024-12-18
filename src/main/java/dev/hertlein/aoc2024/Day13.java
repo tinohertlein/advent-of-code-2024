@@ -13,15 +13,15 @@ import static dev.hertlein.aoc2024.Day13.ButtonType.B;
 import static java.util.Collections.emptyList;
 import static java.util.function.Predicate.not;
 
-public class Day13 implements Day {
+public class Day13 implements Day<Void> {
 
     @Override
-    public long part1(List<String> inputLines) {
+    public Long part1(List<String> inputLines, Void v) {
         return fewestTokensToSpendForPrizes(inputLines, 0L);
     }
 
     @Override
-    public long part2(List<String> inputLines) {
+    public Long part2(List<String> inputLines, Void v) {
         return fewestTokensToSpendForPrizes(inputLines, 10_000_000_000_000L);
     }
 

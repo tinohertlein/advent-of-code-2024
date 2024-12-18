@@ -82,12 +82,12 @@ public class Day13Test {
 
         @Test
         void sampleShouldBeSolved() {
-            assertThat(day.part1(readSampleInputFor(day))).isEqualTo(480L);
+            assertThat(day.part1(readSampleInputFor(day), EMPTY)).isEqualTo(480L);
         }
 
         @ChallengeTest
         void challengeShouldBeSolved() {
-            assertThat(day.part1(readChallengeInputFor(day))).isEqualTo(37_128L);
+            assertThat(day.part1(readChallengeInputFor(day), EMPTY)).isEqualTo(37_128L);
         }
     }
 
@@ -96,12 +96,12 @@ public class Day13Test {
 
         @Test
         void sampleShouldBeSolved() {
-            assertThat(day.part2(readSampleInputFor(day))).isEqualTo(875_318_608_908L);
+            assertThat(day.part2(readSampleInputFor(day), EMPTY)).isEqualTo(875_318_608_908L);
         }
 
         @ChallengeTest
         void challengeShouldBeSolved() {
-            assertThat(day.part2(readChallengeInputFor(day))).isEqualTo(74_914_228_471_331L);
+            assertThat(day.part2(readChallengeInputFor(day), EMPTY)).isEqualTo(74_914_228_471_331L);
         }
     }
 }

@@ -11,6 +11,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 import java.util.Set;
 
+import static dev.hertlein.aoc2024.Day.EMPTY;
 import static dev.hertlein.aoc2024.Day07.Operator.*;
 import static dev.hertlein.aoc2024.lib.InputReader.readChallengeInputFor;
 import static dev.hertlein.aoc2024.lib.InputReader.readSampleInputFor;
@@ -69,12 +70,12 @@ public class Day07Test {
 
         @Test
         void sampleShouldBeSolved() {
-            assertThat(day.part1(readSampleInputFor(day))).isEqualTo(3_749L);
+            assertThat(day.part1(readSampleInputFor(day), EMPTY)).isEqualTo(3_749L);
         }
 
         @ChallengeTest
         void challengeShouldBeSolved() {
-            assertThat(day.part1(readChallengeInputFor(day))).isEqualTo(1_582_598_718_861L);
+            assertThat(day.part1(readChallengeInputFor(day), EMPTY)).isEqualTo(1_582_598_718_861L);
         }
     }
 
@@ -83,12 +84,12 @@ public class Day07Test {
 
         @Test
         void sampleShouldBeSolved() {
-            assertThat(day.part2(readSampleInputFor(day))).isEqualTo(11_387L);
+            assertThat(day.part2(readSampleInputFor(day), EMPTY)).isEqualTo(11_387L);
         }
 
         @ChallengeTest
         void challengeShouldBeSolved() {
-            assertThat(day.part2(readChallengeInputFor(day))).isEqualTo(165_278_151_522_644L);
+            assertThat(day.part2(readChallengeInputFor(day), EMPTY)).isEqualTo(165_278_151_522_644L);
         }
     }
 }

@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
+import static dev.hertlein.aoc2024.Day.EMPTY;
 import static dev.hertlein.aoc2024.lib.InputReader.readChallengeInputFor;
 import static dev.hertlein.aoc2024.lib.InputReader.readSampleInputFor;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -85,12 +86,12 @@ public class Day12Test {
 
         @Test
         void sampleShouldBeSolved() {
-            assertThat(day.part1(readSampleInputFor(day))).isEqualTo(1_930L);
+            assertThat(day.part1(readSampleInputFor(day), EMPTY)).isEqualTo(1_930L);
         }
 
         @ChallengeTest
         void challengeShouldBeSolved() {
-            assertThat(day.part1(readChallengeInputFor(day))).isEqualTo(1_371_306L);
+            assertThat(day.part1(readChallengeInputFor(day), EMPTY)).isEqualTo(1_371_306L);
         }
     }
 
@@ -99,12 +100,12 @@ public class Day12Test {
 
         @Test
         void sampleShouldBeSolved() {
-            assertThat(day.part2(readSampleInputFor(day))).isEqualTo(1_206L);
+            assertThat(day.part2(readSampleInputFor(day), EMPTY)).isEqualTo(1_206L);
         }
 
         @ChallengeTest
         void challengeShouldBeSolved() {
-            assertThat(day.part2(readChallengeInputFor(day))).isEqualTo(805_880L);
+            assertThat(day.part2(readChallengeInputFor(day), EMPTY)).isEqualTo(805_880L);
         }
     }
 }

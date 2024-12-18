@@ -2,9 +2,12 @@ package dev.hertlein.aoc2024;
 
 import java.util.List;
 
-public interface Day {
+public interface Day<T> {
 
-    long part1(List<String> inputLines);
+    Void EMPTY = null;
 
-    long part2(List<String> inputLines);
+    Object part1(List<String> inputLines, T additionalInput);
+
+    Object part2(List<String> inputLines, T additionalInput);
+
 }
