@@ -1,0 +1,27 @@
+name: update aoc badges
+on:
+  schedule:
+    - cron: '23 23 1-25 12 *'
+  workflow_dispatch:
+
+jobs:
+  update-aoc-badges:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Update badges
+        uses: joblo2213/aoc-badges-action@v3
+        with:
+          userid: ${{ secrets.AOC_USER_ID }}
+          session: ${{ secrets.AOC_COOKIE }}
+          year: 2024
+          daysCompletedRegex: '(?<=https:\/\/img\.shields\.io\/badge\/days%20completed-)[0-9]+(?=-red)'
+          starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/stars%20⭐-)[0-9]+(?=-blue)'
+
+      - name: Commit
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "docs: update aoc badges"
+          file_pattern: README.md
